@@ -1,16 +1,28 @@
 // Functions using conditionals but not loops or arrays
 // Make a function names isOdd(number)
-
-function evenOrOdd(num) {
+function isOdd(num) {
     if(num % 2 > 0) return "Your number is odd";
     else return "Your number is even";
 }
 
+console.log(isOdd(3));
+
 // Make a function named isEven(number)
+function isEven(num) {
+    if (num % 2 < 0) return "Your number is odd";
+    else return "Your number is even";
+}
+
+console.log(isEven(4));
+
 // Make a function named identity(input) that returns the input exactly as provided.
-//     Make a function named isFive(input)
+function identity(input){
+    return
+}
+
+// Make a function named isFive(input)
 // Make a function named addFive(input) that adds five to some input.
-//     Make a function named isMultipleOfFive(input)
+// Make a function named isMultipleOfFive(input)
 // Make a function named isThree(input)
 // Make a function named isMultipleOfThree(input)
 // Make a function named isMultipleOfThreeAndFive(input)

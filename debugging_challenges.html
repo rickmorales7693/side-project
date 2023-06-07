@@ -28,19 +28,22 @@
 
     // TODO Help! Why is this always logging the wrong message?
 
+    const punctuation = ["!", ".", "?", ","];
+    const randomIndex = Math.floor(Math.random() * punctuation.length);
+    const randomPunctuation = punctuation[randomIndex];
     function returnPunctuationMsg(punctuation) {
-      let punctuction = ["!", ".", "?", ","]
-      switch(punctuation) {
+        let punctuation = ["!", ".", "?", ","]
+        switch(punctuation) {
         case "!":
-          return "This is an exclamation point";
+            return "This is an exclamation point";
         case ".":
-          return "This is a period";
+            return "This is a period";
         case "?":
-          return "This is a question mark";
+            return "This is a question mark";
         case ",":
-          return "This is a comma";
+            return "This is a comma";
         default:
-          return "I don't know what this is...";
+            return "I don't know what this is...";
       }
     }
 
