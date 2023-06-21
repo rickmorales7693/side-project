@@ -1,8 +1,7 @@
 // Functions using conditionals but not loops or arrays
 // Make a function names isOdd(number)
 function isOdd(num) {
-    if(num % 2 > 0) return "Your number is odd";
-    else return "Your number is even";
+    return num % 2 > 0;
 }
 
 console.log(isOdd(3));
@@ -17,22 +16,78 @@ console.log(isEven(4));
 
 // Make a function named identity(input) that returns the input exactly as provided.
 function identity(input){
-    return
+    return input;
 }
 
+console.log(identity());
+
 // Make a function named isFive(input)
+function isFive(input){
+    return input === 5;
+}
+
+console.log(isFive(5));
+
 // Make a function named addFive(input) that adds five to some input.
+function addFive(input) {
+    return input + 5;
+}
+
+console.log(addFive(5));
+
 // Make a function named isMultipleOfFive(input)
+function isMultipleOfFive(input){
+    return input * 5;
+}
+
+console.log(isMultipleOfFive(5));
+
 // Make a function named isThree(input)
+function isThree(input){
+    return input === 3;
+}
+
+console.log(isThree(5));
+
 // Make a function named isMultipleOfThree(input)
+function isMultipleOfThree(input){
+    return input * 3;
+}
+
+console.log(isMultipleOfThree(6));
+
 // Make a function named isMultipleOfThreeAndFive(input)
+function isMultipleOfThreeAndFive(input){
+    return ((input * 3) * 5);
+}
+
+console.log(isMultipleOfThree(4));
 // Make a function named isMultipleOf(target, n) which checks if target is evenly divisible by n
 // Make a function named isTrue(boolean)
 // Make a function named isFalse(boolean)
 // Make a function named isTruthy(input), remember that values other than true will behave like true
 // Make a function named isFalsy(input), remember that values other than false behave like false
 // Make a function named isVowel(letter)
+function isVowel(letter){
+    if(letter === "a"||"e"||"i"||"o"||"u"){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+console.log(isVowel("a"));
 // Make a function named isConsonant(letter)
+function isConsonant(char) {
+    if (typeof char !== "string" || char.length !== 1) {
+        return false;
+    }
+    char = char.toLowerCase();
+
+    return /^[bcdfghjklmnpqrstvwxyz]$/.test(char);
+}
+
+console.log(isConsonant("a"))
 // Make a function named isCapital(letter)
 // Make a function named isLowerCase(letter)
 // Make a function named hasLowerCase(string) that returns if a string has any lower cased letter
@@ -52,7 +107,7 @@ function identity(input){
 // Write a function named cube(n) that returns n * n * n
 // Write a function named squareRoot(n) that returns the square root of the input
 // Write a function named cubeRoot(n) that returns the cube root of the input
-// Write a function named invertSign(number) that returns a negative version of a postive number, a positve version of negative, and false for all else.
+// Write a function named invertSign(number) that returns a negative version of a positive number, a positive version of negative, and false for all else.
 // Write a function named degreesToRadians(number)
 // Write a function named radiansToDegrees(number)
 // Make a function named isBlank(input) that determines if a given input is spaces, newline characters, or tabs.
@@ -139,3 +194,13 @@ function identity(input){
 //     Create a function, willLoginUser() that takes in a username string, password string, user age, a boolean indicating if they are an admin.
 //
 //     The function will return true if the username is not the same as the password and the user is at least 18 years old. If the user is an admin, they do not have to be a certain age but the password must still not match the username.
+
+function findOdd(arr) {
+    let result = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        result ^= arr[i];
+    }
+
+    return result;
+}

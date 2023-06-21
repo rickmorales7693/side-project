@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>My First HTML Form</title>
+	</head>
+	<body>
+		<h1>User Login</h1>
+		<form method="POST" action="http://request-inspector.glitch.me/">
+			<div>
+				<label for="username">Username</label>
+				<input id="username" name="username" type="text" placeholder="Enter your username">
+			</div>
+			<div>
+				<label for="password">Password</label>
+				<input id="password" name="password" type="password" placeholder="Enter your password">
+			</div>
+			<div>
+				<button type="submit">Login</button>
+			</div>
+		</form>
+		<h1>Compose an Email</h1>
+		<form method="POST" action="http://request-inspector.glitch.me/">
+			<div>
+				<label for="subject">Subject</label>
+				<input id="subject" name="subject" type="text">
+			</div>
+			<div>
+				<label for="body">Body</label>
+				<textarea id="body" name="body" rows="5" cols="40"></textarea>
+			</div>
+			<div>
+				<input type="checkbox" id="save_a_copy_to_your_sent_folder" name="save_a_copy_to_your_sent_folder" value="yes" checked>
+				<label for="save_a_copy_to_their_sent_folder">Save a copy to your sent folder?</label>
+			</div>
+			<div>
+				<button type="submit">Send</button>
+			</div>
+		</form>
+		<h1>Multiple Choice Test</h1>
+		<form method="POST" action="http://request-inspector.glitch.me/">
+			<div>
+				<p>Which came first, the chicken or the egg?</p>
+				<label>
+					<input type="radio" name="q1" value="chicken">
+					Chicken
+				</label>
+				<label>
+					<input type="radio" name="q1" value="egg">
+					Egg
+				</label>
+			</div>
+			<div>
+				<p>What is the capital of Texas?</p>
+				<label>
+					<input type="radio" name="q1" value="houston">
+					Houston
+				</label>
+				<label>
+					<input type="radio" name="q1" value="dalls">
+					Dalls
+				</label>
+				<label> 
+					<input type="radio" name="q1" value="san_antonio">
+					San Antonio
+				</label>
+				<label> 
+					<input type="radio" name="q1" value="austin">
+					Austin
+				</label>
+			</div>
+			<div>
+				<p>Which operating systems have you used?</p>
+				<label><input type="checkbox" id="os1" name="os[]" value="linux"> Linux</label>
+				<label><input type="checkbox" id="os2" name="os[]" value="osx"> OS X</label>
+				<label><input type="checkbox" id="os3" name="os[]" value="windows"> Windows</label>
+			</div>
+			<div>
+				<label for="os">What vehicles brands do you like? </label>
+				<select id="os" name="os[]" multiple>
+					<option value="Ford">Ford</option>
+					<option value="Chevy">Chevy</option>
+					<option value="Ram">Ram</option>
+					<option value="Toyota">Toyota</option>
+				</select>
+			</div>
+			<div>
+				<button type="submit">Submit</button>
+			</div>
+		</form>
+		<h1>Select Testing</h1>
+		<form method="POST" action="http://request-inspector.glitch.me/">
+			<div>
+				<label for="would_you_like_to_pass_this_class">Would you like to pass this class?: </label>
+				<select id="would_you_like_to_pass_this_class" name="would_you_like_to_pass_this_class">
+				<option value="1">Yes</option>
+				<option value="0">No</option>
+				</select>
+			</div>
+			<div>
+				<button type="submit">Submit</button>
+			</div>
+		</form>	
+	</body>
+</html>

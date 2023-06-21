@@ -1,0 +1,42 @@
+h1, h2 {
+	text-decoration: underline;
+}
+
+body {
+	font-family: 'Ysabeau', sans-serif;
+	background-image: url("https://png.pngtree.com/background/20210714/original/pngtree-wavy-abstract-grey-gradient-background-with-square-geometric-pattern-can-be-picture-image_1202067.jpg");
+	background-repeat: no-repeat;
+}
+
+ ul {
+	list-style: square;
+ }
+
+ th,td{
+	padding: 2px;
+ }
+
+ th {
+	font-weight: bold;
+	text-decoration: underline;
+ }
+
+ /*unvisited link (:Link) */
+ a:link {
+	color: red;
+ }
+
+ /*visited link (:visited) */
+ a:visited {
+	color: black;
+ }
+
+ /*mouse hover over link (:hover) */
+ a:hover {
+	color: blue;
+ }
+
+ /* active/selected link (:active) */
+a: active {
+	color: green;
+}
