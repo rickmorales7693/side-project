@@ -61,36 +61,78 @@ function isMultipleOfThreeAndFive(input){
     return ((input * 3) * 5);
 }
 
-console.log(isMultipleOfThree(4));
+console.log(isMultipleOfThreeAndFive(4));
+
 // Make a function named isMultipleOf(target, n) which checks if target is evenly divisible by n
+function isMultipleOf(target, n){
+    return target % n === 0;
+}
+
+console.log(isMultipleOf(5, 5));
+
 // Make a function named isTrue(boolean)
+function isTrue(boolean){
+    return boolean === true;
+}
+
+console.log(isTrue(false));
+
 // Make a function named isFalse(boolean)
+function isFalse(boolean){
+    return boolean === false;
+}
+
+console.log(isFalse(false));
+
 // Make a function named isTruthy(input), remember that values other than true will behave like true
+function isTruthy(input){
+    return input === true;
+}
+
+console.log(isTruthy(false));
+
 // Make a function named isFalsy(input), remember that values other than false behave like false
+function isFalsy(input){
+    return input === false;
+}
+
+console.log(isFalsy(true));
+
 // Make a function named isVowel(letter)
 function isVowel(letter){
-    if(letter === "a"||"e"||"i"||"o"||"u"){
-        return true;
-    }else{
-        return false;
-    }
+    return letter === "a" || letter === "e" || letter === "i" || letter === "o" || letter === "u";
 }
 
 console.log(isVowel("a"));
-// Make a function named isConsonant(letter)
-function isConsonant(char) {
-    if (typeof char !== "string" || char.length !== 1) {
-        return false;
-    }
-    char = char.toLowerCase();
 
-    return /^[bcdfghjklmnpqrstvwxyz]$/.test(char);
+// Make a function named isConsonant(letter)
+function isConsonant(letter){
+    return letter !== "a" && letter !== "e" && letter !== "i" && letter !== "o" && letter !== "u";
 }
 
 console.log(isConsonant("a"))
+
 // Make a function named isCapital(letter)
+function isCapital(letter){
+    return letter === letter.toUpperCase();
+}
+
+console.log(isCapital("A"));
+
 // Make a function named isLowerCase(letter)
+function isLowerCase(letter){
+    return letter === letter.toLowerCase();
+}
+
+console.log(isLowerCase("a"));
+
 // Make a function named hasLowerCase(string) that returns if a string has any lower cased letter
+function hasLowerCase(string){
+    return string === string.toLowerCase();
+}
+
+console.log(hasLowerCase("a"));
+
 // Make a function named isSpace(letter) that returns if a character is a space character
 // Make a function named isZero(number)
 // Make a function named notZero(input) that returns true if the input is not zero
