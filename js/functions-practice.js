@@ -357,36 +357,102 @@ console.log(not(true));
 // Write the function square(a) that takes in a number and returns the number multiplied by itself.
 //
 //     Write a function called sumOfSquares(a, b) that uses only your add() function and your square function and not + or * operators
+function sumOfSquares(a, b){
+    return (a * a) + (b * b);
+}
+
+console.log(sumOfSquares(1, 2));
 //
 // Write a function called doMath(operator, a, b) that takes 3 parameters. The first parameter is the name of the math function you want to apply. a and b are the two numbers to run that function on.
-//
+function doMath(operator, a, b){
+    if(operator === "add"){
+        return a + b;
+    } else if(operator === "subtract"){
+        return a - b;
+    } else if(operator === "multiply"){
+        return a * b;
+    } else if(operator === "divide"){
+        return a / b;
+    } else if(operator === "remainder"){
+        return a % b;
+    } else if(operator === "square"){
+        return a * a;
+    } else if(operator === "sumOfSquares"){
+        return (a * a) + (b * b);
+    }
+}
+
+console.log(doMath("add", 1, 2));
+console.log(doMath("subtract", 1, 2));
+console.log(doMath("multiply", 1, 2));
+console.log(doMath("divide", 1, 2));
+console.log(doMath("remainder", 1, 2));
 // Even More Function Bonuses
 // Create a function that will return how many whitespace characters are at the beginning and end of a string.
+function whitespace(string){
+    return string.trim().length;
+}
+
+console.log(whitespace(" a "));
 //
 //     Create a function that takes in two string inputs.
+function twoStrings(string1, string2){
+    return string1 + string2;
+}
+
+console.log(twoStrings("a", "b"));
 //
 //     If the second string input is present in the first, return the first input string with the second input string removed from it.
+function twoStrings(string1, string2){
+    return string1.replace(string2, "");
+}
+
+console.log(twoStrings("a", "b"));
+
 //     If the second string input is present multiple times in the first, the second string will only be removed where it first occurs in the first string.
+
+
 //     If the second string input is not present in the first, return the first string as entered in the function.
+function twoStrings(string1, string2){
+    if(string1.includes(string2)){
+        return string1.replace(string2, "");
+    } else {
+        return string1;
+    }
+}
+
+console.log(twoStrings("a", "b"));
+
 // Create a function that takes in a string and returns true if the last letter is an "a" (otherwise, return false).
+function lastLetter(string){
+    return string.endsWith("a");
+}
+
+console.log(lastLetter("a"));
+
 //
 // EXTRA CHALLENGE: create a function that will return how many whitespace characters are at the beginning of a string (hint: use regex).
 //
 // Create a function returnTrueMessage() that returns the string "Hey, it's true!"
 //
 // Create a function returnFalseMessage() that returns the string "Hey, it's false!"
+function returnTrueMessage(){
+    return "Hey, it's true!";
+}
+
+console.log(returnTrueMessage());
 // Create a function returnMessage() that takes in a function and returns the call to the function
+function returnFalseMessage(){
+    return "Hey, it's false!";
+}
+
+console.log(returnFalseMessage());
+
 // Experiment passing in different functions.
 //     Create a function, willLoginUser() that takes in a username string, password string, user age, a boolean indicating if they are an admin.
-//
 //     The function will return true if the username is not the same as the password and the user is at least 18 years old. If the user is an admin, they do not have to be a certain age but the password must still not match the username.
-
-function findOdd(arr) {
-    let result = 0;
-
-    for (let i = 0; i < arr.length; i++) {
-        result ^= arr[i];
-    }
-
-    return result;
+function willLoginUser(username, password, userAge, isAdmin){
+    return username !== password && (userAge >= 18 || isAdmin);
 }
+
+console.log(willLoginUser("username", "password", 18, true));
