@@ -289,7 +289,7 @@ console.log(areEqual(1, 1));
 
 // Make a function named areIdentical(input1, input2) that returns if both inputs are same value and data type.
 function areIdentical(input1, input2){
-    return input1 === input2;
+    return input1 === input2 && typeof input1 === typeof input2;
 }
 
 console.log(areIdentical(1, 1));
@@ -302,59 +302,186 @@ function not(input){
 console.log(not(true));
 
 // Make a function named notNot(input) that the negation of the negation of the input.
+function notNot(input){
+    return !!input;
+}
+
+console.log(notNot(true));
+
 //     Make a function named and(predicate1, predicate2) that returns the logical operation of AND
+function and(predicate1, predicate2){
+    return predicate1 && predicate2;
+}
+
+console.log(and(true, true));
+
 // Make a function named or(predicate1, predicate2) that returns the logical operation of OR
+function or(predicate1, predicate2){
+    return predicate1 || predicate2;
+}
+
+console.log(or(true, false));
+
 // Write a function called reverseString(string) that reverses a string
+function reverseString(string){
+    return string.split("").reverse().join("");
+}
+
+console.log(reverseString("Hello"));
+
 // Make a function named absoluteValue(number) that returns the absolute value of a number.
+function absoluteValue(number){
+    return Math.abs(number);
+}
+
+console.log(absoluteValue(-5));
+
 //     Make a function named rollDice(sides) that takes in an argument containing the number of sides the die should have. Generate a random number between 1 up to and including the number of sides.
+function rollDice(sides){
+    return Math.floor(Math.random() * sides) + 1;
+}
+
+console.log(rollDice(6));
+
 //     Simple Function Drills
 // Make a function called returnTwo() that returns the number 2 when called
 // Test this function with console.log(returnTwo())
-//
+function returnTwo(){
+    return 2;
+}
+
+console.log(returnTwo());
+
 //     Make a function called sayHowdy() which console.logs the string “Howdy!”
+function sayHowdy(){
+    console.log("Howdy!");
+}
 //
 // Test this function by directly calling sayHowdy()
+sayHowdy()
 //
 // Remember this function does not need a defined return value
 //
 // Make a function called returnName() that returns the string of your name
+function rerturnName(){
+    return "Rick";
+}
 //
 // Test this function with console.log(returnName())
+console.log(rerturnName());
 //
 //     Make a function called addThree() which takes in a number input and returns the number plus 3.
+function addThree(number){
+    return number + 3;
+}
 // Test this function with console.log(addThree(5))
+console.log(addThree(5));
 //
 //     Make a function called sayString() which returns the string input passed in.
+function sayString(string){
+    return string;
+}
 // Test this function with console.log(sayString('codeup'))
+console.log(sayString("codeup"));
 //
 //     Challenge Function Drills
 // Write a function called identity(input) that takes in an argument called input and returns that input.
+function identity2(input){
+    return input;
+}
+
+console.log(identity2("Hello"));
 //
 //     Write a function called getRandomNumber(min, max) that returns a random number between min and max values sent to that function call.
+function getRandomNumber(min, max){
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+console.log(getRandomNumber(1, 10));
 //
 // Write a function called first(input) that returns the first character in the provided string.
+function first(input){
+    return input.charAt(0);
+}
+
+console.log(first("Hello"));
 //
 //     Write a function called last(input) that returns the last character of a string
+function last(input){
+    return input.charAt(input.length - 1);
+}
+
+console.log(last("Hello"));
 //
 // Write a function called rest(input) that returns everything but the first character of a string.
+function rest(input){
+    return input.substring(1);
+}
+
+console.log(rest("Hello"));
 //
 //     Write a function called reverse(input) that takes a string and returns it reversed.
+function reverse(input){
+    return input.split("").reverse().join("");
+}
+
+console.log(reverse("Hello"));
 //
 //     Write a function called isNumeric(input) that takes an input and returns a boolean if the input is numeric.
+function isNumeric(input){
+    return !isNaN(input);
+}
+
+console.log(isNumeric("Hello"));
 //
 //     Write a function called count(input) that takes in a string and returns the number of characters.
+function count(input){
+    return input.length;
+}
+
+console.log(count("Hello"));
 //
 //     Write a function called add(a, b) that returns the sum of a and b
+function add(a, b){
+    return a + b;
+}
+
+console.log(add(1, 2));
 //
 // Write a function called subtract(a, b) that return the difference between the two inputs.
+function subtract2(a, b){
+    return a - b;
+}
+
+console.log(subtract2(1, 2));
 //
 //     Write multiply(a, b) function that returns the product
+function multiply2(a, b){
+    return a * b;
+}
+
+console.log(multiply2(1, 2));
 //
 // Write a divide(numerator, denominator) function that returns a divided by b
+function divide2(numerator, denominator){
+    return numerator / denominator;
+}
+
+console.log(divide2(1, 2));
 //
 // Write a remainder(number, divisor) function that returns the remainder left over when dividing number by the divisor
+function remainder2(number, divisor){
+    return number % divisor;
+}
+
+console.log(remainder2(1, 2));
 //
 // Write the function square(a) that takes in a number and returns the number multiplied by itself.
+function square(a){
+    return a * a;
+}
+
+console.log(square(2));
 //
 //     Write a function called sumOfSquares(a, b) that uses only your add() function and your square function and not + or * operators
 function sumOfSquares(a, b){
@@ -394,7 +521,7 @@ function whitespace(string){
 }
 
 console.log(whitespace(" a "));
-//
+
 //     Create a function that takes in two string inputs.
 function twoStrings(string1, string2){
     return string1 + string2;
@@ -434,19 +561,25 @@ console.log(lastLetter("a"));
 // EXTRA CHALLENGE: create a function that will return how many whitespace characters are at the beginning of a string (hint: use regex).
 //
 // Create a function returnTrueMessage() that returns the string "Hey, it's true!"
-//
-// Create a function returnFalseMessage() that returns the string "Hey, it's false!"
 function returnTrueMessage(){
     return "Hey, it's true!";
 }
 
 console.log(returnTrueMessage());
-// Create a function returnMessage() that takes in a function and returns the call to the function
+//
+// Create a function returnFalseMessage() that returns the string "Hey, it's false!"
 function returnFalseMessage(){
     return "Hey, it's false!";
 }
 
 console.log(returnFalseMessage());
+
+// Create a function returnMessage() that takes in a function and returns the call to the function
+function returnMessage(func){
+    return func();
+}
+
+console.log(returnMessage(returnTrueMessage));
 
 // Experiment passing in different functions.
 //     Create a function, willLoginUser() that takes in a username string, password string, user age, a boolean indicating if they are an admin.
