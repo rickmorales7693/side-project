@@ -1,6 +1,7 @@
 "use strict";
 
-var myNameIs = 'Rick'; // TODO: Fill in your name here.
+ // TODO: Fill in your name here.
+const myNameIs = 'Rick';
 
 // TODO:
 // Create a function called 'sayHello' that takes a parameter 'name'.
@@ -13,7 +14,7 @@ function sayHello(name) {
 sayHello(myNameIs);
 // Don't modify the following line
 // It generates a random number between 1 and 100 and stores it in random
-var random = Math.floor((Math.random()*100)+1);
+let random = Math.floor((Math.random()*100)+1);
 
 console.log("Random number is:" + random.toString());
 
