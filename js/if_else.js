@@ -4,10 +4,11 @@
 // These creates two variables for you:
 //     one with the colors of the rainbow
 //     another with a single random color value
-var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-var color = colors[Math.floor(Math.random()*colors.length)];
+const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+const color = colors[Math.floor(Math.random()*colors.length)];
 
-var favorite = 'blue'; // TODO: change this to your favorite color from the list
+// TODO: change this to your favorite color from the list
+const favorite = 'blue';
 
 // TODO: Create a block of if/else statements to check for every color except indigo and violet.
 
@@ -30,6 +31,7 @@ if (color === 'red') {
 
 // TODO: When a color is encountered log a message that tells the color, and an object of that color.
 //       Example: Blue is the color of the sky.
+
 
 
 // TODO: Have a final else that will catch indigo and violet.
