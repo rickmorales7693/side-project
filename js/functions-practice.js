@@ -363,12 +363,12 @@ sayHowdy()
 // Remember this function does not need a defined return value
 //
 // Make a function called returnName() that returns the string of your name
-function rerturnName(){
+function returnName(){
     return "Rick";
 }
 //
 // Test this function with console.log(returnName())
-console.log(rerturnName());
+console.log(returnName());
 //
 //     Make a function called addThree() which takes in a number input and returns the number plus 3.
 function addThree(number){
